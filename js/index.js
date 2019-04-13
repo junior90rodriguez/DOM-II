@@ -13,6 +13,10 @@ button.forEach(function(element){
            e.target.style.background = '';
        })
    }) 
+
+   button.forEach(function(element){
+
+   })
 });
 
 // Used Mouseover and Mouseleave (changes color of p tags to blue when mouse hovers over and back to black when mouse isnt hovering over.)
@@ -30,8 +34,8 @@ input.forEach(function(element){
     })
  });
 
+//Used focus to add a blue background to the nav links when clicked and used blur to set back to default when another item is clicked
  const nav = document.querySelectorAll('.nav-link');
- 
  nav.forEach(function(element){
      element.addEventListener('focus', function(e){
         //  console.log('focus works!')
@@ -45,4 +49,13 @@ input.forEach(function(element){
          })
      })
  })
+ 
+ //Used click to make images clicked turn into the background
+const imgBackground = document.querySelectorAll('img')
+imgBackground.forEach(function(element){
+    element.addEventListener('click', function(e){
+        const imgSource = event.target.src;
+        document.body.style.background = `url(${imgSource})`;
+    })
+})
 
