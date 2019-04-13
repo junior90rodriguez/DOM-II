@@ -1,4 +1,6 @@
 // Your code goes here
+
+//Used click to change the background on the buttons to red and then dblclick to change back to default color
 const button = document.querySelectorAll('.btn');
 button.forEach(function(element){
     element.addEventListener('click', function(e){
@@ -7,7 +9,7 @@ button.forEach(function(element){
     })
    button.forEach(function(element){
        element.addEventListener('dblclick', function(e){
-           console.log('dblclick works!')
+        //    console.log('dblclick works!')
            e.target.style.background = '';
        })
    }) 
@@ -28,5 +30,19 @@ input.forEach(function(element){
     })
  });
 
+ const nav = document.querySelectorAll('.nav-link');
+ 
+ nav.forEach(function(element){
+     element.addEventListener('focus', function(e){
+        //  console.log('focus works!')
+         e.target.style.background = 'blue';
+     })
 
+     nav.forEach(function(element){
+         element.addEventListener('blur', function(e){
+            //  console.log('blur works!')
+             e.target.style.background = '';
+         })
+     })
+ })
 
